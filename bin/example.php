@@ -13,14 +13,3 @@ $apiKey = $_ENV['OPENAI_API_KEY'];
 
 // EXAMPLE CODE FROM SLIDE BELOW
 
-$platform = PlatformFactory::create($apiKey);
-$chain = new Chain($platform, new GPT());
-
-$messages = new MessageBag(
-    Message::forSystem('You are a pirate and you write funny.'),
-    Message::ofUser('What is the Symfony framework?'),
-);
-
-$response = $chain->call($messages);
-
-echo $response->getContent();
