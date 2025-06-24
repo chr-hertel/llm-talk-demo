@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4d4c7badccf501c5c66999e5f758ebf",
+    "content-hash": "a632ff3b26697313d9ba700afea25de7",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -210,19 +210,20 @@
         },
         {
             "name": "php-llm/llm-chain",
-            "version": "0.19.0",
+            "version": "0.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain.git",
-                "reference": "a588afeff45d0369161180c2555d608cb1a2ad81"
+                "reference": "dbd6ff8e728a2736cd2b4f49b3e272ec82225824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/a588afeff45d0369161180c2555d608cb1a2ad81",
-                "reference": "a588afeff45d0369161180c2555d608cb1a2ad81",
+                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/dbd6ff8e728a2736cd2b4f49b3e272ec82225824",
+                "reference": "dbd6ff8e728a2736cd2b4f49b3e272ec82225824",
                 "shasum": ""
             },
             "require": {
+                "ext-fileinfo": "*",
                 "oskarstark/enum-helper": "^1.5",
                 "php": ">=8.2",
                 "phpdocumentor/reflection-docblock": "^5.4",
@@ -242,12 +243,15 @@
                 "mongodb/mongodb": "<1.21"
             },
             "require-dev": {
-                "codewithkyrian/chromadb-php": "^0.2.1 || ^0.3",
+                "async-aws/bedrock-runtime": "^0.1.0",
+                "codewithkyrian/chromadb-php": "^0.2.1 || ^0.3 || ^0.4",
+                "codewithkyrian/transformers": "^0.5.3",
                 "mongodb/mongodb": "^1.21",
                 "php-cs-fixer/shim": "^3.70",
                 "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-symfony": "^2.0",
                 "phpstan/phpstan-webmozart-assert": "^2.0",
-                "phpunit/phpunit": "^11.5",
+                "phpunit/phpunit": "^11.5.13",
                 "probots-io/pinecone-php": "^1.0",
                 "rector/rector": "^2.0",
                 "symfony/console": "^6.4 || ^7.1",
@@ -260,7 +264,9 @@
                 "symfony/var-dumper": "^6.4 || ^7.1"
             },
             "suggest": {
+                "async-aws/bedrock-runtime": "For using the Bedrock platform.",
                 "codewithkyrian/chromadb-php": "For using the ChromaDB as retrieval vector store.",
+                "codewithkyrian/transformers": "For using the TransformersPHP with FFI to run models in PHP.",
                 "mongodb/mongodb": "For using MongoDB Atlas as retrieval vector store.",
                 "probots-io/pinecone-php": "For using the Pinecone as retrieval vector store.",
                 "symfony/css-selector": "For using the YouTube transcription tool.",
@@ -286,30 +292,36 @@
                     "email": "oskarstark@googlemail.com"
                 }
             ],
-            "description": "A slim PHP component with tooling around LLMs.",
+            "description": "PHP library for building LLM-based and AI-based features and applications.",
+            "keywords": [
+                "ai",
+                "huggingface",
+                "llm",
+                "transformers"
+            ],
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain/issues",
-                "source": "https://github.com/php-llm/llm-chain/tree/0.19.0"
+                "source": "https://github.com/php-llm/llm-chain/tree/0.23.0"
             },
-            "time": "2025-03-20T21:45:05+00:00"
+            "time": "2025-06-16T18:52:46+00:00"
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "0.19.1",
+            "version": "0.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "ae3de42cb0bb91ad4b48a7a3447b96672ac0f179"
+                "reference": "a23b2d2a041638392f57d34934d34111350dc671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/ae3de42cb0bb91ad4b48a7a3447b96672ac0f179",
-                "reference": "ae3de42cb0bb91ad4b48a7a3447b96672ac0f179",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/a23b2d2a041638392f57d34934d34111350dc671",
+                "reference": "a23b2d2a041638392f57d34934d34111350dc671",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "php-llm/llm-chain": "^0.19",
+                "php-llm/llm-chain": "^0.23",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/framework-bundle": "^6.4 || ^7.0",
@@ -344,9 +356,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.19.1"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.23.0"
             },
-            "time": "2025-04-13T11:14:47+00:00"
+            "time": "2025-06-17T20:05:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2809,82 +2821,6 @@
             "time": "2024-12-23T08:48:59+00:00"
         },
         {
-            "name": "symfony/polyfill-php83",
-            "version": "v1.32.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/2fb86d65e2d424369ad2905e83b236a8805ba491",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php83\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 8.3+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.32.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-09-09T11:45:10+00:00"
-        },
-        {
             "name": "symfony/polyfill-uuid",
             "version": "v1.32.0",
             "source": {
@@ -4576,7 +4512,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.2",
+        "php": ">=8.4",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },

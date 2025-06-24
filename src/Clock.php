@@ -16,6 +16,8 @@ final readonly class Clock
 
     public function __invoke(): string
     {
-        return $this->clock->now()->format('Y-m-d H:i:s');
+        return $this->clock
+            ->withTimeZone('Europe/Berlin')
+            ->now()->format('Y-m-d H:i:s');
     }
 }
