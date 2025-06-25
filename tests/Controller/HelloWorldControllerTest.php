@@ -12,6 +12,7 @@ final class HelloWorldControllerTest extends WebTestCase
         $client->request('GET', '/hello');
 
         $this->assertResponseIsSuccessful();
+        $this->assertResponseHeaderSame('content-type', 'text/html; charset=UTF-8');
         $this->assertSelectorTextContains('body', 'Hello World!');
     }
 }

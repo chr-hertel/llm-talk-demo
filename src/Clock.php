@@ -7,6 +7,7 @@ namespace App;
 use PhpLlm\LlmChain\Chain\Toolbox\Attribute\AsTool;
 use Symfony\Component\Clock\ClockInterface;
 
+#[AsTool('clock', 'Get the current time')]
 final readonly class Clock
 {
     public function __construct(private ClockInterface $clock)
